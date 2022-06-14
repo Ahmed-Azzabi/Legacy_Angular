@@ -16,6 +16,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CartElementComponent } from './cart-element/cart-element.component';
 import { ProductByCategoryComponent } from './product-by-category/product-by-category.component';
 import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavigateProductsComponent } from './navigate-products/navigate-products.component';
 import { BeautyComponent } from './navigate-products/beauty/beauty.component';
 import { ElectronicsComponent } from './navigate-products/electronics/electronics.component';
@@ -41,6 +43,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     CartElementComponent,
     ProductByCategoryComponent,
     UserComponent,
+    LoginComponent,
+    SignUpComponent
     NavigateProductsComponent,
     BeautyComponent,
     ElectronicsComponent,
