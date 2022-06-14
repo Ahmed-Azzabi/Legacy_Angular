@@ -12,6 +12,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CartElementComponent } from './cart-element/cart-element.component';
 import { ProductByCategoryComponent } from './product-by-category/product-by-category.component';
 import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserComponent } from './user/user.component';
     ShoppingCartComponent,
     CartElementComponent,
     ProductByCategoryComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
