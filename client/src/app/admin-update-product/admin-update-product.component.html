@@ -1,0 +1,45 @@
+<div>
+  <div>
+    <div class="newProduct">
+      <h1 class="addProductTitle">Update Product</h1>
+      <img style="width: 300px; height: 300px" src="img" alt="" />
+      <form class="addProductForm">
+        <div class="addProductItem">
+          <label>Product Name</label>
+          <input
+            name="productName"
+            onChange="{handleChange}"
+            type="text"
+            placeholder="Apple Airpods"
+          />
+        </div>
+        <div class="addProductItem">
+          <label>Description</label>
+          <input
+            name="description"
+            onChange="{handleChange}"
+            type="text"
+            placeholder="description..."
+          />
+        </div>
+        <div class="addProductItem">
+          <label>Price</label>
+          <input
+            name="price"
+            onChange="{handleChange}"
+            type="number"
+            placeholder="100"
+          />
+        </div>
+
+        <div class="addProductItem">
+          <label>Stock</label>
+          <input type="text" name="stock" placeholder="..." />
+        </div>
+      </form>
+    </div>
+    <a to="/adminview">
+      <button type="submit" class="updateProductButton">Update</button>
+    </a>
+  </div>
+</div>

@@ -8,6 +8,10 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContainerComponent } from './container/container.component';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { AdminUpdateProductComponent } from './admin-update-product/admin-update-product.component';
+import { AdminSeeOrdersComponent } from './admin-see-orders/admin-see-orders.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ContainerComponent } from './container/container.component';
     BodyComponent,
     FooterComponent,
     SidebarComponent,
-    ContainerComponent
+    ContainerComponent,
+    AdminViewComponent,
+    AdminAddProductComponent,
+    AdminUpdateProductComponent,
+    AdminSeeOrdersComponent
   ],
   imports: [
     BrowserModule,
