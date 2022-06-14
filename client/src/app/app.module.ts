@@ -8,6 +8,10 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContainerComponent } from './container/container.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CartElementComponent } from './cart-element/cart-element.component';
+import { ProductByCategoryComponent } from './product-by-category/product-by-category.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ContainerComponent } from './container/container.component';
     BodyComponent,
     FooterComponent,
     SidebarComponent,
-    ContainerComponent
+    ContainerComponent,
+    ShoppingCartComponent,
+    CartElementComponent,
+    ProductByCategoryComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
