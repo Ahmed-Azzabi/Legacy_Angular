@@ -37,19 +37,19 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     AdminViewComponent,
     AdminAddProductComponent,
     AdminUpdateProductComponent,
-    AdminSeeOrdersComponent
+    AdminSeeOrdersComponent,
 
     ShoppingCartComponent,
     CartElementComponent,
     ProductByCategoryComponent,
     UserComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
     NavigateProductsComponent,
     BeautyComponent,
     ElectronicsComponent,
     HomeAndGardenComponent,
-    JewerlyWatchesComponent
+    JewerlyWatchesComponent,
     ProductDetailComponent
 
   ],
