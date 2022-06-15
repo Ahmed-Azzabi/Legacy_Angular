@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-view',
@@ -8,7 +9,10 @@ import { ProductsService } from '../services/products.service';
 })
 export class AdminViewComponent implements OnInit {
   allProducts: any;
-  constructor(private productService: ProductsService) {}
+  constructor(
+    private productService: ProductsService,
+    private router: Router
+  ) {}
   ngOnInit() {
     this.productService.getAllProducts().subscribe((data) => {
       this.allProducts = data;
@@ -19,8 +23,6 @@ export class AdminViewComponent implements OnInit {
     this.productService.deleteProduct(id).subscribe((res) => {
       console.log(res);
     });
-    this.productService.getAllProducts().subscribe((data) => {
-      this.allProducts = data;
-    });
+    this.ngOnInit();
   }
 }
