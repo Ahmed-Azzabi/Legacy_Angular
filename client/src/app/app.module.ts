@@ -24,6 +24,7 @@ import { ElectronicsComponent } from './navigate-products/electronics/electronic
 import { HomeAndGardenComponent } from './navigate-products/home-and-garden/home-and-garden.component';
 import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jewerly-watches.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,14 +51,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ElectronicsComponent,
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
-    ProductDetailComponent
-
+    ProductDetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

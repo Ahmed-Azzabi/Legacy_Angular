@@ -13,14 +13,34 @@
                       aria-label="Default select example"
                     >
                       <option selected>CATEGORY</option>
-                      <option value="Jewlery and Watches">
+                      <option
+                        name="Jewlery and Watches"
+                        value="Jewlery and Watches"
+                        ngModel
+                      >
                         Jewlery and Watches
                       </option>
-                      <option value="Home And Garden">Home And Garden</option>
-                      <option value="Computer Electronic">
+                      <option
+                        name="Home And Garden"
+                        value="Home And Garden"
+                        ngModel
+                      >
+                        Home And Garden
+                      </option>
+                      <option
+                        name="Computer Electronic"
+                        value="Computer Electronic"
+                        ngModel
+                      >
                         Computer Electronic
                       </option>
-                      <option value="Beauty Product">Beauty Product</option>
+                      <option
+                        name="Beauty Product"
+                        value="Beauty Product"
+                        ngModel
+                      >
+                        Beauty Product
+                      </option>
                     </select>
                     <label
                       for="price"
@@ -35,11 +55,12 @@
                         <span class="text-gray-500 sm:text-sm"> $ </span>
                       </div>
                       <input
-                        type="text"
+                        type="number"
                         name="price"
                         id="price"
                         class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pt-2 pb-2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
                         placeholder="0.00"
+                        ngModel
                       />
                       <div class="absolute inset-y-0 right-0 flex items-center">
                         <label for="currency" class="sr-only"> Currency </label>
@@ -56,11 +77,12 @@
                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
                       ></div>
                       <input
-                        type="text"
-                        name="price"
-                        id="price"
+                        type="number"
+                        name="stock"
+                        id="stock"
                         class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pt-2 pb-2 pl-1 pr-1 w-20 sm:text-sm border-gray-300 rounded-md text-center"
                         placeholder="0"
+                        ngModel
                       />
                       <div class="absolute inset-y-0 right-0 flex items-center">
                         <label for="currency" class="sr-only"> Currency </label>
@@ -69,7 +91,7 @@
                   </div>
                   <div class="col-span-3 sm:col-span-2 mt-14">
                     <label
-                      for="company-website"
+                      for="addproduct"
                       class="block text-sm font-medium text-gray-700"
                     >
                       Add product
@@ -77,16 +99,17 @@
                     <div class="mt-1 flex rounded-md shadow-sm">
                       <input
                         type="text"
-                        name="company-website"
-                        id="company-website"
+                        name="addproduct"
+                        id="addproduct"
                         class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300 pt-2 pb-2 w-1"
                         placeholder="Product name.."
+                        ngModel
                       />
                     </div>
                   </div>
                   <div class="col-span-3 sm:col-span-2">
                     <label
-                      for="company-website"
+                      for="imageurl"
                       class="block text-sm font-medium text-gray-700"
                     >
                       Image URL
@@ -94,10 +117,11 @@
                     <div class="mt-1 flex rounded-md shadow-sm">
                       <input
                         type="text"
-                        name="company-website"
-                        id="company-website"
+                        name="imageurl"
+                        id="imageurl"
                         class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300 pb-2 pt-2"
                         placeholder="URL..."
+                        ngModel
                       />
                     </div>
                   </div>
@@ -105,18 +129,19 @@
 
                 <div>
                   <label
-                    for="about"
+                    for="details"
                     class="block text-sm font-medium text-gray-700"
                   >
                     Details
                   </label>
                   <div class="mt-1">
                     <textarea
-                      id="about"
-                      name="about"
+                      id="details"
+                      name="details"
                       rows="3"
                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md pt-2"
                       placeholder="Product details..."
+                      ngModel
                     ></textarea>
                   </div>
                 </div>

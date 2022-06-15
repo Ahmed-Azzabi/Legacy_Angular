@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'navigateProds', component: NavigateProductsComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, //Home page will be the default page that shows up if no path was provided, on page load for example.
 ];
 
 @NgModule({
