@@ -15,12 +15,14 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'cartelement', component: CartElementComponent },
-  { path: 'productbycategorie', component: ProductByCategoryComponent },
-  { path: 'shoppingcart', component: ShoppingCartComponent },
-  { path: 'myaccount', component: UserComponent },
-  { path: 'productdetail', component: ProductDetailComponent },
-  { path: 'home', component: ContainerComponent },
+
+  {path:'cartelement',component:CartElementComponent},
+  {path:'productbycategorie',component:ProductByCategoryComponent},
+  {path:'shoppingcart',component:ShoppingCartComponent},
+  {path:'myaccount',component:UserComponent},
+  {path:'productdetail',component:ProductDetailComponent},
+  {path:'home',component:ContainerComponent},
+
   { path: 'addproduct', component: AdminAddProductComponent },
   { path: 'seeorders', component: AdminSeeOrdersComponent },
   { path: 'updateproduct', component: AdminUpdateProductComponent },

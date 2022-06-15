@@ -26,6 +26,7 @@ import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jew
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { FormsModule } from '@angular/forms';
     JewerlyWatchesComponent,
     ProductDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
