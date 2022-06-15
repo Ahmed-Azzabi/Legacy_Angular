@@ -25,6 +25,7 @@ import { HomeAndGardenComponent } from './navigate-products/home-and-garden/home
 import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jewerly-watches.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,25 +38,26 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     AdminViewComponent,
     AdminAddProductComponent,
     AdminUpdateProductComponent,
-    AdminSeeOrdersComponent
+    AdminSeeOrdersComponent,
 
     ShoppingCartComponent,
     CartElementComponent,
     ProductByCategoryComponent,
     UserComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
     NavigateProductsComponent,
     BeautyComponent,
     ElectronicsComponent,
     HomeAndGardenComponent,
-    JewerlyWatchesComponent
+    JewerlyWatchesComponent,
     ProductDetailComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
