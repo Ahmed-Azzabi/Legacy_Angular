@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'shoppingcart',component:ShoppingCartComponent},
   {path:'myaccount',component:UserComponent},
   {path:'productdetail',component:ProductDetailComponent},
-  {path:'home',component:ContainerComponent}
+  {path:'home',component:ContainerComponent},
   { path: 'addproduct', component: AdminAddProductComponent },
   { path: 'seeorders', component: AdminSeeOrdersComponent },
   { path: 'updateproduct', component: AdminUpdateProductComponent },
