@@ -1,6 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+.error {
+    color: red;
+    width: 1px;
+    height: 1px;
+    float: top;    
+  }
 * {
 	box-sizing: border-box;
 }

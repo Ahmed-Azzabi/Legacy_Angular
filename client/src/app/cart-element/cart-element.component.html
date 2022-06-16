@@ -1,21 +1,22 @@
 
     <td class="p-4 px-6 text-center whitespace-nowrap"><img src="" class="h-full w-full object-cover object-center"/></td>
-    <td class="p-4 px-6 text-center whitespace-nowrap">productName</td>
+    <td class="p-4 px-6 text-center whitespace-nowrap">{{p.productName}}</td>
     <td class="p-4 px-6 text-center whitespace-nowrap">
+      <form #cartForm="ngForm"></form>
       <div>
-        <button >-</button>
+        <button (click)="sub()" >-</button>
         <input
           type="text"
           name="qty"
-          value="0"
+          [value]="p.quantity"
           class="w-12 text-center bg-gray-100 outline-none"
         />
-        <button>+</button>
+        <button (click)="add()">+</button>
       </div>
     </td>
     <td class="p-4 px-6 text-center whitespace-nowrap">200$</td>
     <td class="p-4 px-6 text-center whitespace-nowrap">
-      <button class="px-2 py-0 text-red-100 bg-red-600 rounded">
+      <button (click)="delete(p.id)" class="px-2 py-0 text-red-100 bg-red-600 rounded">
         x
       </button>
     </td>
