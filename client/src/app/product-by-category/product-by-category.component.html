@@ -1,4 +1,4 @@
-<div class="beauty-container">
+<!-- <div class="beauty-container">
     
 
     <div class="bg-gray-100">
@@ -8,27 +8,35 @@
           class="aa"
         >
           <div>
-            <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+            <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6"> -->
               
               
-                    <div>
-                        <div class="group relative">
+                    <div *ngFor="let product of allProducts">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{product.productName}</h5>
+                          <p class="card-text">{{product.description}</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                        <!-- <div class="group relative">
                             <div class="relative w-full h-80 bg-grey rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                               <img
                                 style=" width: 200px; height:200px"
-                                src=""
+                                [src]="product.imageUrl"
                                 alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
                                 class="w-full h-full object-center object-cover group-hover:opacity-75"
                               />
                             </div>
                             <h3 class="mt-6 text-sm text-gray-500">
                               <span class="absolute inset-0"></span>
-                              productName
+                             {{product.productName}}
                             </h3>
                       
                             <br/>
                             <div class="btn-wraper">
-                              <p class="text-base font-semibold text-gray-900">prod.price TND</p>
+                              <p class="text-base font-semibold text-gray-900">{{product.price}} TND</p>
                               <div>
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +172,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="third-verticale">
       <img
         src="https://www.designhill.com/design-blog/wp-content/uploads/2017/07/offer-deal.png"

@@ -17,7 +17,7 @@ app.use(cors())
 app.use(cookieParser())
 
 const CONNECTION_URL ='mongodb+srv://rbk:rbk123456789@ecommerce.kwvvj.mongodb.net/?retryWrites=true&w=majority'
-const PORT=process.env.PORT || 5000;
+const PORT=process.env.PORT || 9000;
 app.use('/product',productRoutes)
 app.use("/cart", cartRoutes);
 app.use('/user',userRoutes)
