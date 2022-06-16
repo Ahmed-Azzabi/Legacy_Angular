@@ -15,8 +15,10 @@ export class ProductByCategoryComponent implements OnInit {
         this.allProducts=data;
       }
     )
-    console.log(this.allProducts);
+    
     
   }
+
+
 
 }
