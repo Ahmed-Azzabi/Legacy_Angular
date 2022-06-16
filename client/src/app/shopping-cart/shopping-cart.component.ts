@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ShoppingCartComponent implements OnInit {
   cart:any={user:{userName:"test",userId:"test"}
+
             ,products:[
               {productName:"p1",id:"11",imageUrl:"",stock:20,quantity:1},{productName:"p2",id:"12",imageUrl:"",stock:5,quantity:1},{productName:"p3",id:"13",imageUrl:"",stock:10,quantity:1}
             ]}
@@ -15,6 +16,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private cartService:CartsService,private router:Router) {
     this.del=this.del.bind(this)
    }
+
 
   ngOnInit(): void {
   }

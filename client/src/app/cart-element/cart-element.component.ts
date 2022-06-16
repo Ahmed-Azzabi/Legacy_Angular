@@ -1,12 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { CartsService } from '../services/carts.service';
+
 @Component({
   selector: 'app-cart-element',
   templateUrl: './cart-element.component.html',
   styleUrls: ['./cart-element.component.css']
 })
 export class CartElementComponent implements OnInit {
+
+ 
   @Input() p: any
   @Input() delete:any
   cart: any = {};

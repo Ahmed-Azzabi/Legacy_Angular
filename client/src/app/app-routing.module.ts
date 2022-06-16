@@ -18,9 +18,9 @@ const routes: Routes = [
 
   {path:'cartelement',component:CartElementComponent},
   {path:'productbycategorie',component:ProductByCategoryComponent},
+  {path:'productdetail/:id',component:ProductDetailComponent},
   {path:'shoppingcart',component:ShoppingCartComponent},
   {path:'myaccount',component:UserComponent},
-  {path:'productdetail',component:ProductDetailComponent},
   {path:'home',component:ContainerComponent},
 
   { path: 'addproduct', component: AdminAddProductComponent },
