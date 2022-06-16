@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
+
   cart:any={user:{},products:[]}
+
   order:any={userId:"test",products:[]}       
   constructor(private cartService:CartsService,
               private router:Router,
               private userService:UsersService) {
     this.del=this.del.bind(this)
    }
+
 
   ngOnInit(): void {
         // @ts-ignore

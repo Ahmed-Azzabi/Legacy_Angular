@@ -1,44 +1,21 @@
-<div class="container p-8 mx-auto mt-12 bg-white">
-  <div class="w-full overflow-x-auto">
-    <div class="my-2">
-      <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
-    </div>
-    <table class="w-full shadow-inner">
-      <thead>
-        <tr class="bg-gray-100">
-          <th class="px-6 py-3 font-bold whitespace-nowrap">Product</th>
-          <th class="px-6 py-3 font-bold whitespace-nowrap">Qty</th>
-          <th class="px-6 py-3 font-bold whitespace-nowrap">Name</th>
-          <th class="px-6 py-3 font-bold whitespace-nowrap">Price</th>
-          <th class="px-6 py-3 font-bold whitespace-nowrap">Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-         <app-cart-element *ngFor="let product of cart.products" [p]="product" [delete]="del" ></app-cart-element>
-        </tr>
-      </tbody>
-    </table>
-    <div class="flex justify-end mt-4 space-x-2">
-      <button class="
-      px-6
-      py-3
-      text-sm text-gray-800
-      bg-gray-200
-      hover:bg-gray-400
-    ">
-        Cannel
-      </button>
-      <button class="
-      px-6
-      py-3
-      text-sm text-white
-      bg-indigo-500
-      hover:bg-indigo-600
-      "
-       (click)="postCart()" >
-        Proceed to Checkout
-      </button>
+<h2 class="heading">Welcome X, your Shopping Cart:</h2>&nbsp;
+<div class="row">
+  <div class="col-12">
+   <app-cart-element></app-cart-element>
+  </div>
+
+  <div class="col-12 ">
+				<hr />
+    <div class="total">
+					Order Total:
+					<span class="font-weight-bold"></span><hr>
+          <button id="cancel" class="btn btn-outline"> Cancel </button>
+          &nbsp;
+          <button id="empty" class="btn btn-outline"> Empty Cart</button>
+          &nbsp;
+          <button id="checkout" class="btn btn-outline"> Checkout</button>
+
+
     </div>
   </div>
 </div>
