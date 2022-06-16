@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, style, animate, transition, state } from '@angular/animations';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 @Component({
   selector: 'app-product-by-category',
@@ -6,17 +8,35 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./product-by-category.component.css']
 })
 
+
+
+
 export class ProductByCategoryComponent implements OnInit {
   allProducts:any;
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService,private router: Router,
+    private _activatedRoute: ActivatedRoute) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe(
-      data => {
-        this.allProducts=data;
+      products => {
+        this.allProducts=products;
       }
-    )
-    console.log(this.allProducts);
+      )
+    
+    }
+    
+    seeMore(): void{
+      this.router.navigateByUrl('/ajout');
+
+    }
     
   }
-
-}
+  
+  export const fade = [
+    trigger('fade', [
+      state('in', style({ 'opacity': '1' })),
+      state('out', style({ 'opacity': '0' })),
+      transition('* <=> *', [
+        animate(1000)
+      ])
+    ])
+  ];
