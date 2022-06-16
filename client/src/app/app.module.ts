@@ -24,8 +24,12 @@ import { ElectronicsComponent } from './navigate-products/electronics/electronic
 import { HomeAndGardenComponent } from './navigate-products/home-and-garden/home-and-garden.component';
 import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jewerly-watches.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -60,9 +64,14 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
     BrowserAnimationsModule,
     FontAwesomeModule
     
+
+
+    FormsModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],

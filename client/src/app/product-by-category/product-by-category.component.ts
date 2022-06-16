@@ -20,23 +20,17 @@ export class ProductByCategoryComponent implements OnInit {
       products => {
         this.allProducts=products;
       }
-      )
+
+    )
+
     
     }
     
     seeMore(): void{
       this.router.navigateByUrl('/ajout');
 
-    }
-    
-  }
-  
-  export const fade = [
-    trigger('fade', [
-      state('in', style({ 'opacity': '1' })),
-      state('out', style({ 'opacity': '0' })),
-      transition('* <=> *', [
-        animate(1000)
-      ])
-    ])
-  ];
+
+
+
+}
+

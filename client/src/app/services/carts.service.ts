@@ -7,7 +7,7 @@ export class CartsService {
   cartsUrl = 'http://localhost:9000/cart';
   constructor(private httpClient:HttpClient) { }
     getAllcarts() {
-      return this.httpClient.get<{message:string,carts:any}>(`${this.cartsUrl}/mycarts`);
+      return this.httpClient.get<{carts:any}>(`${this.cartsUrl}`);
     }
   
     //Get one Object

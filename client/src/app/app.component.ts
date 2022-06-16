@@ -8,4 +8,5 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   faMinus = faMinus
+
 }
