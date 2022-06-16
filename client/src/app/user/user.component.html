@@ -1,38 +1,74 @@
-
-  <div class="bg-grey-lighter min-h-screen flex flex-col">
-    <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-            <h1 class="mb-8 text-3xl text-center">Edit</h1>
-            <input 
-                type="text"
-                class="block border border-grey-light w-full p-3 rounded mb-4"
-                UserName="username"
-                placeholder="UserName" />
-
-            <input 
-                type="text"
-                class="block border border-grey-light w-full p-3 rounded mb-4"
-                name="phone"
-                placeholder="Phone" />
-
-                <input 
-                type="text"
-                class="block border border-grey-light w-full p-3 rounded mb-4"
-                name="adress"
-                placeholder="Adress" />    
-
-            
-            
-                
-                <div class="rounded-md shadow">
-            <button
-                type="submit"     class="block border border-grey-light w-full p-3 rounded mb-4"
-                >  Update</button>
-
-       </div>
-           
+<div class="beauty-container">  
+    <div class="userTitleContainer"></div>
+    <div class="userContainer">
+      <div class="userShow">
+        <div class="userShowTop"></div>
+        <div class="userShowBottom">
+          <span class="userShowTitle">Account Details</span>
+          <div class="userShowInfo">
+            <span class="userShowInfoTitle">userName</span>
+          </div>
+          <div class="userShowInfo"></div>
+          <span class="userShowTitle">Contact Details</span>
+          <div class="userShowInfo">
+            <span class="userShowInfoTitle">phoneNumber</span>
+          </div>
+          <div class="userShowInfo">
+            <span class="userShowInfoTitle">email</span>
+          </div>
+          <div class="userShowInfo">
+            <span class="userShowInfoTitle">adress</span>
+          </div>
         </div>
+      </div>
+      <div class="userUpdate">
+        <span class="userUpdateTitle">Edit</span>
+        <form class="userUpdateForm">
+          <div class="userUpdateLeft">
+            <div class="userUpdateItem">
+              <label>Username</label>
+              
+              <input
+                value=""
+                type="text"
+                placeholder="Username"
+                class="userUpdateInput"
+              />
+            </div>
 
-        
+            <div class="userUpdateItem">
+              <label>Phone</label>
+              <input
+                value=""
+                type="text"
+                placeholder="Phone Number"
+                class="userUpdateInput"
+              />
+            </div>
+            <div class="userUpdateItem">
+              <label>Address</label>
+              <input
+                value=""
+                type="text"
+                placeholder="Address"
+                class="userUpdateInput"
+              />
+
+              <br/>
+              <br/>
+            </div>
+          </div>
+          <div class="userUpdateRight">
+            <div class="userUpdateUpload"></div>
+            <button
+              class="btn"
+              style="margin-left:40px"
+             
+            >
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-</div>
+  </div>
