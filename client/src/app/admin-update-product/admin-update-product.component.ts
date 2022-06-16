@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-admin-update-product',
   templateUrl: './admin-update-product.component.html',
