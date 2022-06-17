@@ -12,31 +12,26 @@ import { ProductsService } from '../services/products.service';
 
 
 export class ProductByCategoryComponent implements OnInit {
-  allProducts:any;
-  constructor(private productService: ProductsService,private router: Router,
+  allProducts: any;
+  constructor(private productService: ProductsService, private router: Router,
     private _activatedRoute: ActivatedRoute) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe(
       products => {
-        this.allProducts=products;
+        this.allProducts = products;
       }
-      )
-    
-    }
-    
-    seeMore(): void{
-      this.router.navigateByUrl('/ajout');
 
-    }
-    
+    )
+
+
   }
-  
-  export const fade = [
-    trigger('fade', [
-      state('in', style({ 'opacity': '1' })),
-      state('out', style({ 'opacity': '0' })),
-      transition('* <=> *', [
-        animate(1000)
-      ])
-    ])
-  ];
+
+  seeMore(): void {
+    this.router.navigateByUrl('/ajout');
+
+
+
+
+  }
+
+}
