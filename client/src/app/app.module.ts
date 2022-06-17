@@ -24,16 +24,15 @@ import { ElectronicsComponent } from './navigate-products/electronics/electronic
 import { HomeAndGardenComponent } from './navigate-products/home-and-garden/home-and-garden.component';
 import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jewerly-watches.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
 import { HttpClientModule } from '@angular/common/http';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
+import { OneProductComponent } from './one-product/one-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +60,8 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
     JewerlyWatchesComponent,
     ProductDetailComponent,
     OneOrderComponent,
-    OneOrderProductComponent
+    OneOrderProductComponent,
+    OneProductComponent
 
   ],
   imports: [
@@ -69,16 +69,13 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
     AppRoutingModule,
     HttpClientModule,
 
-    BrowserAnimationsModule,
-    FontAwesomeModule,
-    
-
-
     FormsModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    FontAwesomeModule,
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

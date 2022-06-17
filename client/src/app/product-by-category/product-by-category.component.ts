@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition, state } from '@angular/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 @Component({
@@ -26,12 +25,9 @@ export class ProductByCategoryComponent implements OnInit {
 
   }
 
-  seeMore(): void {
-    this.router.navigateByUrl('/ajout');
-
-
-
-
+  seeMore(id:string): void {
+    this.router.navigate(['/productdetail',id ])
+       
   }
 
 }

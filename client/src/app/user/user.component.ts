@@ -44,8 +44,12 @@ export class UserComponent implements OnInit {
   }
 
   update(newInfo:any){
-    console.log(newInfo)    
-    this.userService.editUser(newInfo).subscribe(
+    let temp:any=newInfo
+    temp.phoneNumber=Number(temp.phoneNumber)
+    temp._id=this.userInfo._id 
+    console.log(temp);
+       
+    this.userService.editUser(temp).subscribe(
       (res)=>{location.reload()}
     )
   }
