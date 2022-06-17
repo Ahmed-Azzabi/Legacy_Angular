@@ -3,7 +3,7 @@ import Cart from "../models/cart.js";
 export const getAllCarts = function (req, res) {
   Cart.find()
     .then((data) => {
-      res.json(data);
+      res.json({ message: "carts retrieved", carts: data });
     })
     .catch((err) => {
       res.status(404).json({ message: "carts not found", error: err.message });

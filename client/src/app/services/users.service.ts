@@ -21,11 +21,11 @@ export class UsersService {
     return this.httpClient.post<{message:string,user:any}>(`${this.userUrl}/login`, user);
   }
 
-  getUserById(id:number){
+  getUserById(id:string){
     // api/users/5
     return this.httpClient.get<{user:any}>(`${this.userUrl}/${id}`);  }
 
-  deleteUser(id:number) {
+  deleteUser(id:string) {
     return this.httpClient.delete(`${this.userUrl}/${id}`); }
 
   editUser(user:any){
