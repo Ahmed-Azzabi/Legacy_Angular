@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CartsService } from '../services/carts.service';
 
 @Component({
   selector: 'app-admin-see-orders',
@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-see-orders.component.css']
 })
 export class AdminSeeOrdersComponent implements OnInit {
-
-  constructor() { }
+  carts:any
+  constructor(private cartService:CartsService) { }
 
   ngOnInit(): void {
+    this.cartService.getAllcarts().subscribe((carts)=>{
+      this.carts=carts      
+    })
   }
 
 }

@@ -24,8 +24,10 @@ import { ElectronicsComponent } from './navigate-products/electronics/electronic
 import { HomeAndGardenComponent } from './navigate-products/home-and-garden/home-and-garden.component';
 import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jewerly-watches.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,13 +53,16 @@ import { HttpClientModule } from '@angular/common/http';
     ElectronicsComponent,
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    AboutUsComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
