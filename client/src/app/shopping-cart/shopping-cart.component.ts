@@ -40,6 +40,7 @@ export class ShoppingCartComponent implements OnInit {
    this.cart.products=this.cart.products.filter((element:any)=>{return element.id!==id})
    
    localStorage.setItem('cart',JSON.stringify({products:this.cart.products}))
+   this.ngOnInit()
   }
   clearCart(){
     localStorage.removeItem('cart')
