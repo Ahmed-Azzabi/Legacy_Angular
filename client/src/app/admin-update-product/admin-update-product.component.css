@@ -39,3 +39,9 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.beauty-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
