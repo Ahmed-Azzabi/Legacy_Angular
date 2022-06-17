@@ -34,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
+import { OneProductComponent } from './one-product/one-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
     JewerlyWatchesComponent,
     ProductDetailComponent,
     OneOrderComponent,
-    OneOrderProductComponent
+    OneOrderProductComponent,
+    OneProductComponent
 
   ],
   imports: [
