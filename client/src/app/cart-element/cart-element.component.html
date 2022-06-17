@@ -1,11 +1,11 @@
-<div class="row" id="1">
+<div class="row">
   <div class="col-6">
     <div class="product-cart">
-      <img src=".." alt="Card image cap">
-        <p>Product Name</p>
-        <small>( Price ) </small>
+      <img [src]="p.imageUrl" alt="Card image cap">
+        <p>{{p.productName}}</p>
+        <small>{{p.price}}</small>
       </div>
-      <small id="desc">Description</small>
+      <small id="desc">{{p.description}}</small>
   </div>
   <div class="col-2 p-0">
     <p 
@@ -14,13 +14,13 @@
       value="quantity"
       name=""
       
-    ><strong><button class="add-nd-dec">-</button></strong> 0 <strong><button>+</button></strong></p>
+    ><strong><button (click)="sub()" class="add-nd-dec">-</button></strong> {{p.quantity}} <strong><button (click)="add()">+</button></strong></p>
   </div>
   <div class="col-2 pr-0">
-        <div class="price">Price</div>
+        <div class="price">{{p.price}}</div>
   </div>
   <div class="col-1 pl-0">
-    <button class="px-2 py-0 text-red-100 bg-red-600 rounded">
+    <button (click)="delete(p.id)" class="px-2 py-0 text-red-100 bg-red-600 rounded">
       x
     </button>  </div>
 </div>

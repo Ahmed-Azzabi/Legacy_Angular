@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit {
 
   cart:any={user:{},products:[]}
-
+  total:number=0
   order:any={userId:"test",products:[]}       
   constructor(private cartService:CartsService,
               private router:Router,
               private userService:UsersService) {
     this.del=this.del.bind(this)
+    this.ngOnInit=this.ngOnInit.bind(this)
    }
 
 
@@ -27,7 +28,9 @@ export class ShoppingCartComponent implements OnInit {
                 // @ts-ignore
         if(JSON.parse(localStorage.getItem('cart'))){
           // @ts-ignore
-                  this.cart.products=this.cart.products.concat(JSON.parse(localStorage.getItem('cart')).products)
+                  this.cart.products=JSON.parse(localStorage.getItem('cart')).products
+                  this.total=this.cart.products.reduce((acc:number,e:any)=>{return acc+(e.price*e.quantity)},0)
+                  
                 }
         }
         
@@ -35,6 +38,12 @@ export class ShoppingCartComponent implements OnInit {
   }
   del(id:string):void{
    this.cart.products=this.cart.products.filter((element:any)=>{return element.id!==id})
+   
+   localStorage.setItem('cart',JSON.stringify({products:this.cart.products}))
+  }
+  clearCart(){
+    localStorage.removeItem('cart')
+    location.reload()
   }
   postCart(){
     this.order.products=this.cart.products.map((e:any)=>{return {productId:e.id,quantity:e.quantity}})
