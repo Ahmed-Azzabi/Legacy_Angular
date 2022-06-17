@@ -32,6 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { OneOrderComponent } from './one-order/one-order.component';
+import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,9 @@ import { HttpClientModule } from '@angular/common/http';
     ElectronicsComponent,
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    OneOrderComponent,
+    OneOrderProductComponent
 
   ],
   imports: [
@@ -66,7 +70,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
     
 
 
