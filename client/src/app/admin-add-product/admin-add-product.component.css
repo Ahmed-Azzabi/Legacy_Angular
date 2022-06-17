@@ -1,7 +1,6 @@
-/* .admin-container {
-  display: flex;
-  background-color: rgb(5, 5, 32);
-} */
+.admin-container {
+margin-left: 30%;
+}
 
 #btn{
   max-width: 400px;

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition, state } from '@angular/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 @Component({
@@ -14,24 +13,40 @@ import { ProductsService } from '../services/products.service';
 export class ProductByCategoryComponent implements OnInit {
   allProducts: any;
   constructor(private productService: ProductsService, private router: Router,
-    private _activatedRoute: ActivatedRoute) { }
+    private route: ActivatedRoute) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe(
-      products => {
-        this.allProducts = products;
+      (products:any) => {
+        this.allProducts = products.filter((e:any)=>{
+          if(this.route.snapshot.paramMap.get("category")==="jewerly"){
+             return e.category==="Jewlery and Watches"
+          }
+          else if(this.route.snapshot.paramMap.get("category")==="beauty"){
+             return e.category==="Beauty Product"
+          }
+          else if(this.route.snapshot.paramMap.get("category")==="electronics"){
+             return e.category==="Computer Electronic"
+          }
+          else if(this.route.snapshot.paramMap.get("category")==="home&garden"){
+             return e.category==="Home And Garden"
+          }
+          else{
+             return e
+          }
+      
+        });
+        console.log(this.allProducts);
       }
-
+      
+      
     )
 
 
   }
 
-  seeMore(): void {
-    this.router.navigateByUrl('/ajout');
-
-
-
-
+  seeMore(id:string): void {
+    this.router.navigate(['/productdetail',id ])
+       
   }
 
 }
