@@ -11,15 +11,10 @@ export class UsersService {
     return this.httpClient.get<{message:string,users:any}>(`${this.userUrl}/api/myusers`);
   }
   // signup
-  signup(user:any,image:File){
-    let formData=new FormData();
-    formData.append('firstName',user.firstName);
-    formData.append('lastName',user.lastName);
-    formData.append('email',user.email);
-    formData.append('pwd',user.pwd);
-    formData.append('tel',user.tel);
-    formData.append('avatar',image);
-    return this.httpClient.post<{message:string}>(`${this.userUrl}/signup`, formData);
+  signup(user:any){
+    
+    
+    return this.httpClient.post<{message:string}>(`${this.userUrl}/signup`, user);
   }
   // login
   login(user:any){  

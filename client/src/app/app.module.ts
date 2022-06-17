@@ -26,7 +26,12 @@ import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jew
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { HttpClientModule } from '@angular/common/http';
+import { OneOrderComponent } from './one-order/one-order.component';
+import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,13 +58,18 @@ import { HttpClientModule } from '@angular/common/http';
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
     ProductDetailComponent,
+    OneOrderComponent,
+    OneOrderProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
   ],
 
   providers: [],
