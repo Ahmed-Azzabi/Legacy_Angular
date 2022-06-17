@@ -4,10 +4,8 @@ import jsonwebtoken from 'jsonwebtoken'
 const TOKEN_SECRET = "b91028378997c0b3581821456edefd0ec7958f953f8c1a6dd856e2de27f0d7e0fb1a01cda20d1a6890267e629f0ff5dc7ee46bce382aba62d13989614417606a"
 export const login = async (req, res) => {
     try {
-        console.log(req.body);
         if (req.body.token) {
             const verify = jsonwebtoken.verify(req.body.token, TOKEN_SECRET);
-            console.log(verify);
             if (verify) {
                 res.status(201).json(verify)
             }
@@ -28,7 +26,6 @@ export const login = async (req, res) => {
                         res.status(400).send("wrong password!");
                     }
                     else {
-                        console.log(user);
                         const token = jsonwebtoken.sign({ id: user._id, username: user.userName, type: user.role }, TOKEN_SECRET, { expiresIn: '24h' })
                         res.status(201).json({ token, status: "connected" });
                     }
@@ -43,7 +40,6 @@ export const login = async (req, res) => {
 
 export const signup = async (req, res) => {
     try {
-        console.log(req.body);
         if (req.body.userName.length < 5 || req.body.userName.length > 50) {
             res.status(400).send("check user name")
         }
@@ -78,8 +74,8 @@ export const signup = async (req, res) => {
 }
 export const edit = async (req, res) => {
     try {
+        console.log(req.body);
         let data =await User.findByIdAndUpdate(req.params._id, req.body)
-        console.log(data);
         res.json({ message: "updated successfully", data })
     } catch (error) {
         res.status(404).json({ message: error.message })

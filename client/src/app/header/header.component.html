@@ -1,9 +1,7 @@
 <div>
-  {{user|json}}
   <nav class="navbar bg-gray-900">
     <div class="navbar-logo">
       Shopium
-
 
       <p>icon</p>
     </div>
@@ -18,9 +16,6 @@
         <div><a routerLink="/navigateProds">Shop</a></div>
       </li>
 
-      <li key="5" class="nav-item">
-        <div><a routerLink="/myaccount">Account</a></div>
-      </li>
 
       <li *ngIf="!connected" key="6" class="nav-item">
         <div>

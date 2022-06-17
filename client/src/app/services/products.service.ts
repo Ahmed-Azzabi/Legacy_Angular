@@ -7,7 +7,7 @@ export class ProductsService {
   productsUrl = 'http://localhost:9000/product';
   constructor(private httpClient:HttpClient) { }
     getAllProducts() {
-      return this.httpClient.get<{data:any}>(`${this.productsUrl}/`)
+      return this.httpClient.get<{products:any}>(`${this.productsUrl}/`)
     }
   
     //Get one Object

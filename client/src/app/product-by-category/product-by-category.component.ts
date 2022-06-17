@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 @Component({
   selector: 'app-product-by-category',
@@ -6,19 +7,27 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./product-by-category.component.css']
 })
 
+
+
+
 export class ProductByCategoryComponent implements OnInit {
-  allProducts:any;
-  constructor(private productService: ProductsService) { }
+  allProducts: any;
+  constructor(private productService: ProductsService, private router: Router,
+    private _activatedRoute: ActivatedRoute) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe(
-      data => {
-        this.allProducts=data;
+      products => {
+        this.allProducts = products;
       }
+
     )
-    
-    
+
+
   }
 
-
+  seeMore(id:string): void {
+    this.router.navigate(['/productdetail',id ])
+       
+  }
 
 }
