@@ -1,30 +1,53 @@
 <div>
   <div>
     <div class="newProduct">
-      <h1 class="addProductTitle">Update Product</h1>
-      <img style="width: 300px; height: 300px" src="img" alt="img" />
-      <form class="addProductForm">
+      <h1 (click)="test()" class="addProductTitle">Update Product</h1>
+      <img
+        style="width: 300px; height: 300px"
+        [src]="currentProd.data.imageUrl"
+        alt="img"
+      />
+      <form
+        class="addProductForm"
+        #editForm="ngForm"
+        (ngSubmit)="updateProduct(editForm.value)"
+      >
         <div class="addProductItem">
-          <label>Product Name</label>
-          <input name="productName" type="text" placeholder="Product name..." />
+          <label>current name: {{ currentProd.data.productName }}</label>
+          <input
+            name="productName"
+            type="text"
+            placeholder="New product name..."
+            ngModel
+          />
         </div>
         <div class="addProductItem">
           <label>Description</label>
-          <input name="description" type="text" placeholder="description..." />
+          <input
+            name="description"
+            type="text"
+            placeholder="New description..."
+            ngModel
+          />
         </div>
         <div class="addProductItem">
-          <label>Price</label>
-          <input name="price" type="number" placeholder="100" />
+          <label>current price: {{ currentProd.data.price }}</label>
+          <input
+            name="price"
+            type="number"
+            placeholder="New price..."
+            ngModel
+          />
         </div>
 
         <div class="addProductItem">
-          <label>Stock</label>
-          <input type="text" name="stock" placeholder="Stock..." />
+          <label> current stock: {{ currentProd.data.stock }}</label>
+          <input type="text" name="stock" placeholder="New stock..." ngModel />
+        </div>
+        <div>
+          <button class="updateProductButton">Update</button>
         </div>
       </form>
     </div>
-    <a to="/adminview">
-      <button type="submit" class="updateProductButton">Update</button>
-    </a>
   </div>
 </div>
