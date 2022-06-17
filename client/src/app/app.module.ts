@@ -32,6 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
+import { OneProductComponent } from './one-product/one-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,8 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
     ProductDetailComponent,
     OneOrderComponent,
     OneOrderProductComponent,
+    OneProductComponent
+
   ],
   imports: [
     BrowserModule,
