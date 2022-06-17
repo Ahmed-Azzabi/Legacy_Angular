@@ -11,7 +11,7 @@
           <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
             
             
-                  <div *ngFor="let product of allProducts">
+                  <div *ngFor="let product of allProducts">                   
                       <div class="group relative">
                           <div id="product-card" class="relative w-full h-80 bg-grey rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                             <img
@@ -57,7 +57,9 @@
                           <br/>
                         </div>
                     <button
-                      class="btn">
+                      class="btn"
+                      (click)="seeMore(product._id)"
+                      >
                       Buy
                     </button>
                     <br/>

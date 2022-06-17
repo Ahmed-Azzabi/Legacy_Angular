@@ -1,4 +1,7 @@
 <div class="admin-container">
-  <app-sidebar></app-sidebar>
+
+  <app-sidebar *ngIf="user"></app-sidebar>
+  
+
   <router-outlet></router-outlet>
 </div>
