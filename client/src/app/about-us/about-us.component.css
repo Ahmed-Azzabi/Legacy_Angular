@@ -75,3 +75,11 @@ body {
       display: block;
     }
   }
+
+ .mb-12 img{
+    border-radius: 15px;
+   background-color: #edfcf3;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    max-width: 400px;    
+  }
