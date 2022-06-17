@@ -16,12 +16,11 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'cartelement', component: CartElementComponent },
-  { path: 'productbycategorie', component: ProductByCategoryComponent },
+  { path: 'productbycategorie/:category', component: ProductByCategoryComponent },
   { path: 'shoppingcart', component: ShoppingCartComponent },
   { path: 'myaccount', component: UserComponent },
   { path: 'productdetail/:id', component: ProductDetailComponent },
   { path: 'home', component: ContainerComponent },
-
   { path: 'addproduct', component: AdminAddProductComponent },
   { path: 'seeorders', component: AdminSeeOrdersComponent },
   {

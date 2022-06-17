@@ -11,6 +11,7 @@ export class AdminSeeOrdersComponent implements OnInit {
   ngOnInit(): void {
     this.cartService.getAllcarts().subscribe((carts) => {
       this.carts = carts.carts;
+
     });
   }
 }
