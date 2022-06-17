@@ -27,6 +27,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     ElectronicsComponent,
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    AboutUsComponent,
 
   ],
   imports: [
