@@ -1,19 +1,26 @@
 <h2 class="heading">Welcome X, your Shopping Cart:</h2>&nbsp;
 <div class="row">
   <div class="col-12">
-   <app-cart-element></app-cart-element>
+    <div *ngIf="cart.products.length" >
+   <app-cart-element 
+   *ngFor="let product of cart.products" 
+   [p]="product"
+   [delete]="del"
+   [up]="ngOnInit"
+   ></app-cart-element>
   </div>
+</div>
 
   <div class="col-12 ">
 				<hr />
-    <div class="total">
-					Order Total:
+    <div class="total" >
+					Order Total: {{!cart.products.length?0:total}} TND
 					<span class="font-weight-bold"></span><hr>
           <button id="cancel" class="btn btn-outline"> Cancel </button>
           &nbsp;
-          <button id="empty" class="btn btn-outline"> Empty Cart</button>
+          <button (click)="clearCart()" id="empty" class="btn btn-outline" *ngIf="cart.products.length" > Empty Cart</button>
           &nbsp;
-          <button id="checkout" class="btn btn-outline"> Checkout</button>
+          <button (click)="postCart()" id="checkout" class="btn btn-outline" *ngIf="cart.products.length"> Checkout</button>
 
 
     </div>

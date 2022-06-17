@@ -12,25 +12,26 @@ import { ProductsService } from '../services/products.service';
 
 
 export class ProductByCategoryComponent implements OnInit {
-  allProducts:any;
-  constructor(private productService: ProductsService,private router: Router,
+  allProducts: any;
+  constructor(private productService: ProductsService, private router: Router,
     private _activatedRoute: ActivatedRoute) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe(
       products => {
-        this.allProducts=products;
+        this.allProducts = products;
       }
 
     )
 
-    
-    }
-    
-    seeMore(): void{
-      this.router.navigateByUrl('/ajout');
+
+  }
+
+  seeMore(): void {
+    this.router.navigateByUrl('/ajout');
 
 
 
+
+  }
 
 }
-

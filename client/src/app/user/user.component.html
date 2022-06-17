@@ -6,54 +6,87 @@
         <div class="userShowBottom">
           <span class="userShowTitle">Account Details</span>
           <div class="userShowInfo">
-            <span class="userShowInfoTitle">userName</span>
+            <span class="userShowInfoTitle">{{userInfo?userInfo.userName:""}}</span>
           </div>
           <div class="userShowInfo"></div>
           <span class="userShowTitle">Contact Details</span>
           <div class="userShowInfo">
-            <span class="userShowInfoTitle">phoneNumber</span>
+            <span class="userShowInfoTitle">{{userInfo?userInfo.phoneNumber:""}}</span>
           </div>
           <div class="userShowInfo">
-            <span class="userShowInfoTitle">email</span>
+            <span class="userShowInfoTitle">{{userInfo?userInfo.email:""}}</span>
           </div>
           <div class="userShowInfo">
-            <span class="userShowInfoTitle">adress</span>
+            <span class="userShowInfoTitle">{{userInfo?userInfo.adress:""}}</span>
           </div>
         </div>
       </div>
       <div class="userUpdate">
         <span class="userUpdateTitle">Edit</span>
-        <form class="userUpdateForm">
+        <form [formGroup]="updateForm">
           <div class="userUpdateLeft">
             <div class="userUpdateItem">
               <label>Username</label>
               
               <input
                 value=""
+                formControlName="userName"
                 type="text"
                 placeholder="Username"
                 class="userUpdateInput"
               />
+              <div *ngIf="updateForm.controls['userName'].invalid && 
+                    (updateForm.controls['userName'].dirty || updateForm.controls['userName'].touched)">
+                        <span *ngIf="updateForm.controls['userName'].errors.minlength" class="error">
+                            user name must have at least 5 characters !!
+                        </span>
+                        <span *ngIf="updateForm.controls['userName'].errors.required" class="error">
+                            user name name is required !!
+                        </span>
+              </div>
             </div>
 
             <div class="userUpdateItem">
               <label>Phone</label>
               <input
-                value=""
+              value=""
+              formControlName="phoneNumber"
                 type="text"
                 placeholder="Phone Number"
                 class="userUpdateInput"
               />
+              <div *ngIf="updateForm.controls['phoneNumber'].invalid && 
+                    (updateForm.controls['phoneNumber'].dirty || updateForm.controls['phoneNumber'].touched)">
+                    <span *ngIf="updateForm.controls['phoneNumber'].errors.minlength" class="error">
+                        invalid phonenumber!
+                    </span>
+                    <span *ngIf="updateForm.controls['phoneNumber'].errors.maxlength" class="error">
+                        invalid phonenumber!
+                    </span>
+                    <span *ngIf="updateForm.controls['phoneNumber'].errors.required" class="error">
+                        phonenumber is required !!
+                    </span>
+                    <span *ngIf="updateForm.controls['phoneNumber'].errors.pattern" class="error">
+                        only number!
+                    </span>
+                    </div>
             </div>
+            
             <div class="userUpdateItem">
               <label>Address</label>
               <input
-                value=""
+              value=""
+              formControlName="adress"
                 type="text"
                 placeholder="Address"
                 class="userUpdateInput"
               />
-
+              <div *ngIf="updateForm.controls['adress'].invalid && 
+              (updateForm.controls['adress'].dirty || updateForm.controls['adress'].touched)">
+              <span *ngIf="updateForm.controls['adress'].errors.required" class="error">
+                  adress is required !!
+              </span>
+              </div>
               <br/>
               <br/>
             </div>
@@ -63,7 +96,8 @@
             <button
               class="btn"
               style="margin-left:40px"
-             
+              [disabled]='updateForm.invalid'
+              (click)="update(updateForm.value)"
             >
               Update
             </button>
