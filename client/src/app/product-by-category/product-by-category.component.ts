@@ -27,8 +27,7 @@ export class ProductByCategoryComponent implements OnInit {
 
   seeMore(id:string): void {
     this.router.navigate(['/productdetail',id ])
-    console.log("hhh");
-    
+       
   }
 
 }
