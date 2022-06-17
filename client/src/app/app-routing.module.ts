@@ -19,15 +19,20 @@ const routes: Routes = [
   { path: 'productbycategorie', component: ProductByCategoryComponent },
   { path: 'shoppingcart', component: ShoppingCartComponent },
   { path: 'myaccount', component: UserComponent },
-  { path: 'productdetail', component: ProductDetailComponent },
+  { path: 'productdetail/:id', component: ProductDetailComponent },
   { path: 'home', component: ContainerComponent },
+
   { path: 'addproduct', component: AdminAddProductComponent },
   { path: 'seeorders', component: AdminSeeOrdersComponent },
-  { path: 'updateproduct', component: AdminUpdateProductComponent },
+  {
+    path: 'updateproduct/:_id',
+    component: AdminUpdateProductComponent,
+  },
   { path: 'adminview', component: AdminViewComponent },
   { path: 'navigateProds', component: NavigateProductsComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, //Home page will be the default page that shows up if no path was provided, on page load for example.
 ];
 
 @NgModule({
