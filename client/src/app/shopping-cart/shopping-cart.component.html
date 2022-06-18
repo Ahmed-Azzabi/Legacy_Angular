@@ -16,7 +16,7 @@
     <div class="total" >
 					Order Total: {{!cart.products.length?0:total}} TND
 					<span class="font-weight-bold"></span><hr>
-          <button id="cancel" class="btn btn-outline"> Cancel </button>
+          <button id="cancel" class="btn btn-outline" (click)="cancel()"> Cancel </button>
           &nbsp;
           <button (click)="clearCart()" id="empty" class="btn btn-outline" *ngIf="cart.products.length" > Empty Cart</button>
           &nbsp;
