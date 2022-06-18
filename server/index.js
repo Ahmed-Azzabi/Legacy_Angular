@@ -3,28 +3,33 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import cookieParser from 'cookie-parser';
+import cookieParser from "cookie-parser";
 
-import productRoutes from './routes/product.js'
-import userRoutes from'./routes/user.js'
-import cartRoutes from "./routes/cart.js"
+import productRoutes from "./routes/product.js";
+import userRoutes from "./routes/user.js";
+import cartRoutes from "./routes/cart.js";
+import supportRoutes from "./routes/support.js";
 const app = express();
 
-app.use(bodyParser.json({limit:"30mb",extended:true}))
-app.use(bodyParser.urlencoded({limit:"30mb",extended:true}))
-app.use(express.json())
-app.use(cors())
-app.use(cookieParser())
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
 
-const CONNECTION_URL ='mongodb+srv://rbk:rbk123456789@ecommerce.kwvvj.mongodb.net/?retryWrites=true&w=majority'
-const PORT=process.env.PORT || 9000;
-app.use('/product',productRoutes)
+const CONNECTION_URL =
+  "mongodb+srv://rbk:rbk123456789@ecommerce.kwvvj.mongodb.net/?retryWrites=true&w=majority";
+const PORT = process.env.PORT || 9000;
+app.use("/product", productRoutes);
 app.use("/cart", cartRoutes);
-app.use('/user',userRoutes)
-app.get("/",(req,res)=>{
-    res.send("app running")
-})
-mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
-.then(()=>app.listen(PORT,()=>console.log(`Server runing on port:${PORT}`)))
-.catch((err)=>console.log(err.message))
-
+app.use("/user", userRoutes);
+app.get("/", (req, res) => {
+  res.send("app running");
+});
+app.use("/tickets", supportRoutes);
+mongoose
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() =>
+    app.listen(PORT, () => console.log(`Server runing on port:${PORT}`))
+  )
+  .catch((err) => console.log(err.message));

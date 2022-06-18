@@ -34,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
 import { OneProductComponent } from './one-product/one-product.component';
+import { SupportComponent } from './support/support.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +65,9 @@ import { OneProductComponent } from './one-product/one-product.component';
     AboutUsComponent,
     OneOrderComponent,
     OneOrderProductComponent,
-    OneProductComponent
+    OneProductComponent,
+    SupportComponent,
+    AdminSupportComponent
 
   ],
   imports: [
