@@ -15,7 +15,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { SupportComponent } from './support/support.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { SupportTicketsComponent } from './support-tickets/support-tickets.component';
 const routes: Routes = [
   { path: 'cartelement', component: CartElementComponent },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'home', component: ContainerComponent },
   { path: 'addproduct', component: AdminAddProductComponent },
   { path: 'seeorders', component: AdminSeeOrdersComponent },
-  {path: 'aboutus', component: AboutUsComponent},
+  { path: 'aboutus', component: AboutUsComponent },
   {
     path: 'updateproduct/:_id',
     component: AdminUpdateProductComponent,
@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }, //Home page will be the default page that shows up if no path was provided, on page load for example.
   { path: 'support', component: SupportComponent },
+  { path: 'tickets', component: SupportTicketsComponent },
 ];
 
 @NgModule({

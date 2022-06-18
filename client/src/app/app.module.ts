@@ -36,6 +36,7 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
 import { OneProductComponent } from './one-product/one-product.component';
 import { SupportComponent } from './support/support.component';
 import { AdminSupportComponent } from './admin-support/admin-support.component';
+import { SupportTicketsComponent } from './support-tickets/support-tickets.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { AdminSupportComponent } from './admin-support/admin-support.component';
     OneOrderProductComponent,
     OneProductComponent,
     SupportComponent,
-    AdminSupportComponent
+    AdminSupportComponent,
+    SupportTicketsComponent
 
   ],
   imports: [
