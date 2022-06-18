@@ -21,4 +21,13 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  cartNumber(){
+    // @ts-ignore
+    if(JSON.parse(localStorage.getItem('cart'))){
+      // @ts-ignore
+    return JSON.parse(localStorage.getItem('cart')).products.length
+    }
+    else return 0
+  }
+
 }
