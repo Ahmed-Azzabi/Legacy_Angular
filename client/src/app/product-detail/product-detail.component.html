@@ -5,13 +5,13 @@
         <div class=" w-full sm:w-96 md:w-8/12  lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
           <div class=" w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
             <img
-              src="imageUrl"
+              [src]="product.imageUrl"
               alt="Wooden Chair Previw"/>
           </div>
         </div>
         <div class="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
           <h2 id="name" class="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">
-            "productName"
+            {{product.productName}}
           </h2>
           <div class=" flex flex-row justify-between  mt-5">
             <div class=" flex flex-row space-x-3">
@@ -84,10 +84,10 @@
           </div>
           <p>"brand"</p>
           <p class=" font-normal text-base leading-6 text-gray-600 mt-7">
-           "description"
+           {{product.description}}
           </p>
           <p class=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">
-            "price TND"
+            {{product.price}} TND
           </p>
         </div>
 
@@ -99,6 +99,7 @@
       <div class="flex  justify-center items-center ">
         
           <button
+          (click)="addToCart(product)"
             id="btn"
             class="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-1200 py-5 lg:mt-18 mt-6"
           >
