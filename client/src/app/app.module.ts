@@ -37,6 +37,8 @@ import { OneProductComponent } from './one-product/one-product.component';
 import { SupportComponent } from './support/support.component';
 import { AdminSupportComponent } from './admin-support/admin-support.component';
 import { SupportTicketsComponent } from './support-tickets/support-tickets.component';
+import { AboutUsHeadComponent } from './about-us-head/about-us-head.component';
+import { AboutUsTestimonialComponent } from './about-us-testimonial/about-us-testimonial.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +71,9 @@ import { SupportTicketsComponent } from './support-tickets/support-tickets.compo
     OneProductComponent,
     SupportComponent,
     AdminSupportComponent,
-    SupportTicketsComponent
+    SupportTicketsComponent,
+    AboutUsHeadComponent,
+    AboutUsTestimonialComponent
 
   ],
   imports: [
