@@ -257,3 +257,9 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+
+.beauty-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
