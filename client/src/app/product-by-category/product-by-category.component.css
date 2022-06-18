@@ -119,7 +119,7 @@
   border: none;
   font-size: 20px;
   text-transform: uppercase;
-  background-color: #cba51b;
+  background-color: #dfb9ea;
   color: #fff;
   cursor: pointer;
   transform: scale(1, 1);
@@ -166,18 +166,6 @@ label {
 
 }
 
-#site-search{
-  width: 40%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-   margin-left: 2%;
-}
-
-
-#div-search{
-  padding: 5%;
+.search{
+  transform: translateX(10%);
 }
