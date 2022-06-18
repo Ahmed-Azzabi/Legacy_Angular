@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.removeItem("loged")
+    localStorage.removeItem('cart')
     this.router.navigate(["home"]).then(()=>{location.reload()})
   }
   

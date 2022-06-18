@@ -11,7 +11,7 @@ const productSchema = mongoose.Schema({
       "Beauty Product",
     ],
   },
-  brand: String,
+  brand:String,
   price: Number,
   imageUrl: String,
   stock: Number,
