@@ -1,14 +1,13 @@
-#container1{
-    /* position: absolute; */
-    margin-top: 80px;
-    margin-right: 0%;
-    margin-left:20%;
-    
-    
-    /* width: 800px;
+#container1 {
+  /* position: absolute; */
+  margin-top: 80px;
+  margin-right: 0%;
+  margin-left: 20%;
+}
+
+/* width: 800px;
     height: 500px; */
 
-  
-#text{
-    text-decoration: none;
+#text {
+  text-decoration: none;
 }
