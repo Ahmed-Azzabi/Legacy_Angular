@@ -12,12 +12,8 @@
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                 <div class="grid grid-cols-3 gap-6">
                   <div>
-
-                    
-
                     <select
                       class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none mb-4"
-
                       aria-label="Default select example"
                       (change)="selectedHandler($event)"
                     >
@@ -97,6 +93,24 @@
                       />
                     </div>
                   </div>
+                  <div class="col-span-3 sm:col-span-2 mt-14">
+                    <label
+                      for="brand"
+                      class="block text-sm font-medium text-gray-700"
+                    >
+                      <strong>Brand</strong>
+                    </label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <input
+                        type="text"
+                        name="brand"
+                        id="brand"
+                        class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300 pt-2 pb-2 w-1"
+                        placeholder="Brand name.."
+                        ngModel
+                      />
+                    </div>
+                  </div>
                   <div class="col-span-3 sm:col-span-2">
                     <label
                       for="imageurl"
@@ -138,13 +152,9 @@
                 </div>
               </div>
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-
-               
-
                 <button
                   id="btn"
                   roulerLink="/adminview"
-
                   class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Save
@@ -156,11 +166,6 @@
       </div>
     </div>
   </div>
-</div> 
-<br>
-<br>
-
-
-
-
- 
+</div>
+<br />
+<br />

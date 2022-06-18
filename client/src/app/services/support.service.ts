@@ -17,4 +17,8 @@ export class SupportService {
   addTicket(ticket: any) {
     return this.httpClient.post(`${this.ticketUrl}`, ticket);
   }
+  //Delete a ticket from DB
+  deleteTicket(id: any) {
+    return this.httpClient.delete(`${this.ticketUrl}/${id}`);
+  }
 }
