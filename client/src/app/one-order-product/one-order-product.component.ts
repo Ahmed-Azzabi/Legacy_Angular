@@ -8,15 +8,15 @@ import { ProductsService } from '../services/products.service';
 export class OneOrderProductComponent implements OnInit {
 @Input() product:any
 prod:any
-  constructor(private productService:ProductsService) { }
+  constructor(private productService:ProductsService ) { }
 
   ngOnInit(): void {
     this.productService.getProductById(this.product.productId).subscribe(
       (product:any)=>{
         this.prod=product.data
       }
-    )
-    
+    ) 
   }
+  
 
 }

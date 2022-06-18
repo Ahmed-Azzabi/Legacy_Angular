@@ -52,7 +52,9 @@ export class ShoppingCartComponent implements OnInit {
     this.order.products=this.cart.products.map((e:any)=>{return {productId:e._id,quantity:e.quantity}})
     console.log(this.order);    
     this.cartService.addCart(this.order).subscribe(()=>{
-      console.log("cart saved");
+      this.router.navigate(['navigateProds']).then(()=>{location.reload()})
+      localStorage.removeItem('cart')
+
     })
   }
 }
