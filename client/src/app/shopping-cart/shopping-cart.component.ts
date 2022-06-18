@@ -34,6 +34,7 @@ export class ShoppingCartComponent implements OnInit {
                 }
         }
         
+        
     )
   }
   del(id:string):void{
@@ -47,9 +48,13 @@ export class ShoppingCartComponent implements OnInit {
     location.reload()
   }
   postCart(){
-    this.order.products=this.cart.products.map((e:any)=>{return {productId:e.id,quantity:e.quantity}})
+    this.order.userId=this.cart.user.userId
+    this.order.products=this.cart.products.map((e:any)=>{return {productId:e._id,quantity:e.quantity}})
+    console.log(this.order);    
     this.cartService.addCart(this.order).subscribe(()=>{
-      console.log("cart saved");
+      this.router.navigate(['navigateProds']).then(()=>{location.reload()})
+      localStorage.removeItem('cart')
+
     })
   }
 }

@@ -26,7 +26,7 @@ import { JewerlyWatchesComponent } from './navigate-products/jewerly-watches/jew
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -34,6 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
 import { OneProductComponent } from './one-product/one-product.component';
+import { SupportComponent } from './support/support.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
+import { SupportTicketsComponent } from './support-tickets/support-tickets.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,14 +66,17 @@ import { OneProductComponent } from './one-product/one-product.component';
     AboutUsComponent,
     OneOrderComponent,
     OneOrderProductComponent,
-    OneProductComponent
+    OneProductComponent,
+    SupportComponent,
+    AdminSupportComponent,
+    SupportTicketsComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    Ng2SearchPipeModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

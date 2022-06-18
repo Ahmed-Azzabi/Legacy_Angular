@@ -40,7 +40,7 @@
             <span class="flex-1 ml-3 whitespace-nowrap">Cart</span>
             <span
               class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200"
-              >3</span
+              >{{ cartNumber() }}</span
             >
           </a>
         </li>
@@ -104,6 +104,23 @@
             <span class="flex-1 ml-3 whitespace-nowrap">Add product</span>
           </a>
         </li>
+        <li *ngIf="user.type === 'admin'">
+          <a
+            routerLink="/tickets"
+            class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            <svg
+              class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+              <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+            </svg>
+            <span class="ml-3">Tickets</span>
+          </a>
+        </li>
       </ul>
     </div>
   </aside>
@@ -114,12 +131,11 @@
     style="width: 300px; height: 400px"
   />
   <img
-  src="https://image.shutterstock.com/image-vector/makeup-clearance-sale-banner-dark-600w-1632999406.jpg"
-  style="width: 300px; height: 400px"
-/>
-<img
-  src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/end-of-summer-sale-design-template-4280caf6f343eab3fb46fc030959e16e_screen.jpg?ts=1636989366"
-  style="width: 300px; height: 400px"
-/>
-
+    src="https://image.shutterstock.com/image-vector/makeup-clearance-sale-banner-dark-600w-1632999406.jpg"
+    style="width: 300px; height: 400px"
+  />
+  <img
+    src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/end-of-summer-sale-design-template-4280caf6f343eab3fb46fc030959e16e_screen.jpg?ts=1636989366"
+    style="width: 300px; height: 400px"
+  />
 </div>
