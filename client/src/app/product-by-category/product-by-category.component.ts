@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
+
 @Component({
   selector: 'app-product-by-category',
   templateUrl: './product-by-category.component.html',
@@ -12,6 +13,8 @@ import { ProductsService } from '../services/products.service';
 
 export class ProductByCategoryComponent implements OnInit {
   allProducts: any;
+  //@ts-ignore
+  searchText;
   constructor(private productService: ProductsService, private router: Router,
     private route: ActivatedRoute) { }
   ngOnInit() {
