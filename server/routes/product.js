@@ -5,7 +5,7 @@ import {
   deletProduct,
   updateProduct,
   findProduct,
-  getOneProdById
+  getOneProdById,
 } from "../controllers/product.js";
 
 const router = express.Router();
@@ -13,7 +13,7 @@ const router = express.Router();
 router.get("/", getAllProduct);
 router.post("/", addProduct);
 router.delete("/:_id", deletProduct);
-router.put("/:_id", updateProduct);
+router.patch("/:_id", updateProduct);
 router.get("/findProduct", findProduct);
 router.get("/:_id", getOneProdById);
 
