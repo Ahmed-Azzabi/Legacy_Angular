@@ -23,11 +23,14 @@
         <td class="px-6 py-4 dark:text-black">{{ ticket.website }}</td>
         <td class="px-6 py-4 dark:text-black">{{ ticket.message }}</td>
         <td class="px-6 py-4 text-right dark:text-black">
-          <a
+          <button
+            (click)="deleteTicket(ticket._id)"
+            type="button"
             href="#"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-            >Solved</a
           >
+            Solved
+          </button>
         </td>
       </tr>
     </tbody>

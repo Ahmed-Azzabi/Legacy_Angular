@@ -16,4 +16,11 @@ export class SupportTicketsComponent implements OnInit {
       console.log(data, 'tickets');
     });
   }
+
+  deleteTicket(id: string) {
+    this.supportService.deleteTicket(id).subscribe((res) => {
+      console.log(res, 'deleted?');
+    });
+    location.reload();
+  }
 }
