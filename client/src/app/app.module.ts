@@ -30,8 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { OneOrderComponent } from './one-order/one-order.component';
 import { OneOrderProductComponent } from './one-order-product/one-order-product.component';
+import { OneProductComponent } from './one-product/one-product.component';
+import { SupportComponent } from './support/support.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,8 +62,13 @@ import { OneOrderProductComponent } from './one-order-product/one-order-product.
     HomeAndGardenComponent,
     JewerlyWatchesComponent,
     ProductDetailComponent,
+    AboutUsComponent,
     OneOrderComponent,
     OneOrderProductComponent,
+    OneProductComponent,
+    SupportComponent,
+    AdminSupportComponent
+
   ],
   imports: [
     BrowserModule,

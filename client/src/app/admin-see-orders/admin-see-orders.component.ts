@@ -10,7 +10,8 @@ export class AdminSeeOrdersComponent implements OnInit {
   constructor(private cartService: CartsService) {}
   ngOnInit(): void {
     this.cartService.getAllcarts().subscribe((carts) => {
-      this.carts = carts;
+      this.carts = carts.carts;
+      
     });
   }
 }

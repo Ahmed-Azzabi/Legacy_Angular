@@ -8,16 +8,15 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  allProducts:any;
+  product:any;
   constructor(private productService: ProductsService,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(
-      products => {
-        this.allProducts=products;
+    this.productService.getProductById(this.route.snapshot.paramMap.get("id")||"").subscribe(
+      product => {
+        this.product=product;
       }
       )
-      console.log(this.route.snapshot.paramMap.get("id"))
   }
 
 }
