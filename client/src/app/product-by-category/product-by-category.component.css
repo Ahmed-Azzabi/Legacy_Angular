@@ -133,3 +133,51 @@
 #svg {
   color: #cba51b;
 }
+
+
+label {
+  display:contents;
+  font: 1rem 'Fira Sans', sans-serif;
+  font-size: larger;
+  cursor: default;
+  color:#cba51b;
+  padding: 5px;
+}
+
+input,
+label {
+  margin: 50rem 10;
+}
+
+#btn{
+  max-width: 400px;
+  padding: 11px 12px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #cba51b;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  position: relative;
+  margin-left: 2%;
+
+}
+
+#site-search{
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+   margin-left: 2%;
+}
+
+
+#div-search{
+  padding: 5%;
+}
