@@ -26,6 +26,7 @@ export class AdminAddProductComponent {
     imageUrl: string;
     description: string;
     category: string;
+    brand: string;
   }) {
     console.log(product);
     product.category = this.selectedCat;
