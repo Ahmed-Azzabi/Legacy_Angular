@@ -275,3 +275,7 @@ footer a {
 .cont{
 margin-left: 10%;
 }
+
+#cont{
+	transform: translateX(77%);
+}
