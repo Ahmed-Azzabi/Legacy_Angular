@@ -37,6 +37,12 @@ import { OneProductComponent } from './one-product/one-product.component';
 import { SupportComponent } from './support/support.component';
 import { AdminSupportComponent } from './admin-support/admin-support.component';
 import { SupportTicketsComponent } from './support-tickets/support-tickets.component';
+import { AboutUsHeadComponent } from './about-us-head/about-us-head.component';
+import { AboutUsTestimonialComponent } from './about-us-testimonial/about-us-testimonial.component';
+import { AboutUsTrustedByComponent } from './about-us-trusted-by/about-us-trusted-by.component';
+import { AboutUsTopQualityComponent } from './about-us-top-quality/about-us-top-quality.component';
+import { AboutUsWhyComponent } from './about-us-why/about-us-why.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +75,13 @@ import { SupportTicketsComponent } from './support-tickets/support-tickets.compo
     OneProductComponent,
     SupportComponent,
     AdminSupportComponent,
-    SupportTicketsComponent
+    SupportTicketsComponent,
+    AboutUsHeadComponent,
+    AboutUsTestimonialComponent,
+    AboutUsTrustedByComponent,
+    AboutUsTopQualityComponent,
+    AboutUsWhyComponent,
+    UserEditComponent
 
   ],
   imports: [
