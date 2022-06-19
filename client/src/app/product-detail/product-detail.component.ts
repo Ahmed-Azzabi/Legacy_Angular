@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 import { UsersService } from '../services/users.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -13,7 +13,7 @@ export class ProductDetailComponent implements OnInit {
   @Input() connected: boolean = false
   @Input() user: any
 
-  constructor(private productService: ProductsService, private route: ActivatedRoute, private userService: UsersService) { }
+  constructor(private router: Router,private productService: ProductsService, private route: ActivatedRoute, private userService: UsersService) { }
 
   ngOnInit(): void {
     this.productService.getProductById(this.route.snapshot.paramMap.get("id") || "").subscribe(
@@ -25,27 +25,32 @@ export class ProductDetailComponent implements OnInit {
     this.logged()
   }
   addToCart(prod: any) {
-    console.log(prod);
-
-    let test = false
-    // @ts-ignore
-    if (JSON.parse(localStorage.getItem('cart'))) {
-      let storage: any = JSON.parse(localStorage.getItem('cart') || "")
-      for (let i = 0; i < storage.products.length; i++) {
-        if (storage.products[i]._id === prod._id) {
-          storage.products[i].quantity++
-          test = true
-          break
+    if (this.connected) {
+      let test = false
+      // @ts-ignore
+      if (JSON.parse(localStorage.getItem('cart'))) {
+        let storage: any = JSON.parse(localStorage.getItem('cart') || "")
+        for (let i = 0; i < storage.products.length; i++) {
+          if (storage.products[i]._id === prod._id) {
+            storage.products[i].quantity++
+            test = true
+            break
+          }
         }
+        prod.quantity = 1
+        !test ? storage.products.push(prod) : storage.products
+        localStorage.setItem('cart', JSON.stringify({ products: storage.products }))
       }
-      prod.quantity = 1
-      !test ? storage.products.push(prod) : storage.products
-      localStorage.setItem('cart', JSON.stringify({ products: storage.products }))
+      else {
+        prod.quantity = 1
+        localStorage.setItem('cart', JSON.stringify({ products: [prod] }))
+      }   
     }
-    else {
-      prod.quantity = 1
-      localStorage.setItem('cart', JSON.stringify({ products: [prod] }))
+    else{
+      this.router.navigate(['login'])
     }
+
+    
 
   }
 
