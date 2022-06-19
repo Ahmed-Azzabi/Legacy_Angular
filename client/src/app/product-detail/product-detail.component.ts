@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../services/products.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,39 +9,64 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  product:any;
-  constructor(private productService: ProductsService,  private route: ActivatedRoute) { }
+  product: any;
+  @Input() connected: boolean = false
+  @Input() user: any
+
+  constructor(private productService: ProductsService, private route: ActivatedRoute, private userService: UsersService) { }
 
   ngOnInit(): void {
-    this.productService.getProductById(this.route.snapshot.paramMap.get("id")||"").subscribe(
-      (product:any) => {
-        this.product=product.data;
+    this.productService.getProductById(this.route.snapshot.paramMap.get("id") || "").subscribe(
+      (product: any) => {
+        this.product = product.data;
       }
-      )
+    )
+
+    this.logged()
   }
-  addToCart(prod:any){
+  addToCart(prod: any) {
     console.log(prod);
-    
-   let test=false
-       // @ts-ignore
-   if(JSON.parse(localStorage.getItem('cart')) ){
-    let storage:any = JSON.parse(localStorage.getItem('cart')||"")      
-    for (let i = 0; i < storage.products.length; i++) {
-      if(storage.products[i]._id===prod._id){
-        storage.products[i].quantity++
-        test=true
-        break
-      }      
+
+    let test = false
+    // @ts-ignore
+    if (JSON.parse(localStorage.getItem('cart'))) {
+      let storage: any = JSON.parse(localStorage.getItem('cart') || "")
+      for (let i = 0; i < storage.products.length; i++) {
+        if (storage.products[i]._id === prod._id) {
+          storage.products[i].quantity++
+          test = true
+          break
+        }
+      }
+      prod.quantity = 1
+      !test ? storage.products.push(prod) : storage.products
+      localStorage.setItem('cart', JSON.stringify({ products: storage.products }))
     }
-    prod.quantity=1
-    !test?storage.products.push(prod):storage.products
-    localStorage.setItem('cart',JSON.stringify({products:storage.products}))
-   }
-   else{
-    prod.quantity=1
-    localStorage.setItem('cart',JSON.stringify({products:[prod]}))
-   }
-   
+    else {
+      prod.quantity = 1
+      localStorage.setItem('cart', JSON.stringify({ products: [prod] }))
+    }
+
+  }
+
+  logged() {
+    // @ts-ignore
+    if (JSON.parse(localStorage.getItem('loged'))) {
+      // @ts-ignore
+      this.userService.login(JSON.parse(localStorage.getItem('loged'))).subscribe(
+        (user: any) => {
+          this.user = user
+          if (user) {
+            this.connected = true
+            console.log(this.connected)
+          }
+          else {
+            this.connected = false
+          }
+        }
+      )
+
+    }
   }
 
 }
