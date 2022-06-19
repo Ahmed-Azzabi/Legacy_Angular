@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CartsService {
-  cartsUrl = 'http://localhost:9000/cart';
+  cartsUrl = 'https://angular-shopium.herokuapp.com/cart';
   constructor(private httpClient: HttpClient) {}
   getAllcarts() {
     return this.httpClient.get<{ message: string; carts: any }>(

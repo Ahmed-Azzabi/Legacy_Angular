@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductsService {
-  productsUrl = 'http://localhost:9000/product';
+  productsUrl = 'https://angular-shopium.herokuapp.com/product';
   constructor(private httpClient:HttpClient) { }
     getAllProducts() {
       return this.httpClient.get<{products:any}>(`${this.productsUrl}/`)

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class SupportService {
-  ticketUrl = 'http://localhost:9000/tickets';
+  ticketUrl = 'https://angular-shopium.herokuapp.com/tickets';
   constructor(private httpClient: HttpClient) {}
 
   //Get all the tickets in DB

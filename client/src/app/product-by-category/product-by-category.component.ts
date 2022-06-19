@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-product-by-category',
@@ -16,7 +17,8 @@ export class ProductByCategoryComponent implements OnInit {
   constructor(
     private productService: ProductsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private userService: UsersService
   ) { }
   ngOnInit() {
     this.productService.getAllProducts().subscribe((products: any) => {
