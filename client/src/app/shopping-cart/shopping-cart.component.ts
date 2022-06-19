@@ -37,22 +37,22 @@ export class ShoppingCartComponent implements OnInit {
         
     )
   }
-  // del(id:string):void{
-  //  this.cart.products=this.cart.products.filter((element:any)=>{return element.id!==id})
+  del(p:any):void{
+   this.cart.products=this.cart.products.filter((element:any)=>{return element._id!==p._id})
    
-  //  localStorage.setItem('cart',JSON.stringify({products:this.cart.products}))
-  //  this.ngOnInit()
-  // }
-  del(p: any):void{
-    let storage: any = JSON.parse(localStorage.getItem('cart') || "");
-    for (let i = 0; i < storage.products.length; i++) {
-      if (storage.products[i]._id === p._id) {
-        storage.products.splice(i, 1);
-        localStorage.setItem('cart', JSON.stringify({products : storage.products}));
-        this.ngOnInit()
-      }
-    }
+   localStorage.setItem('cart',JSON.stringify({products:this.cart.products}))
+   this.ngOnInit()
   }
+  // del(p: any):void{
+  //   let storage: any = JSON.parse(localStorage.getItem('cart') || "");
+  //   for (let i = 0; i < storage.products.length; i++) {
+  //     if (storage.products[i]._id === p._id) {
+  //       storage.products.splice(i, 1);
+  //       localStorage.setItem('cart', JSON.stringify({products : storage.products}));
+  //       this.ngOnInit()
+  //     }
+  //   }
+  // }
   clearCart(){
     localStorage.removeItem('cart')
     location.reload()

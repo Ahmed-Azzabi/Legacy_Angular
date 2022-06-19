@@ -50,7 +50,7 @@ export class CartElementComponent implements OnInit {
       // @ts-ignore
           let temp:any=JSON.parse(localStorage.getItem('cart')).products
           temp.map((e:any)=>{
-            e.id===this.p.id?e.quantity--:e.quantity
+            e._id===this.p._id?e.quantity--:e.quantity
           })
           localStorage.setItem('cart',JSON.stringify({products:temp}))
           this.up()  
