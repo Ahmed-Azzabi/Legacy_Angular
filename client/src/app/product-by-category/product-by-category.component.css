@@ -119,7 +119,7 @@
   border: none;
   font-size: 20px;
   text-transform: uppercase;
-  background-color: #86688f;
+  background-color: #6e5675;
   color: #fff;
   cursor: pointer;
   transform: scale(1, 1);
@@ -128,11 +128,9 @@
 }
 .btn:hover {
   transform: scale(1.1, 1.1);
+  /* background-color: blanchedalmond; */
 }
 
-#svg {
-  color: #cba51b;
-}
 
 
 label {
@@ -149,22 +147,6 @@ label {
   margin: 50rem 10;
 }
 
-#btn{
-  max-width: 400px;
-  padding: 11px 12px;
-  border-radius: 15px;
-  border: none;
-  font-size: 20px;
-  text-transform: uppercase;
-  background-color: #cba51b;
-  color: #fff;
-  cursor: pointer;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-  position: relative;
-  margin-left: 2%;
-
-}
 
 .search{
   transform: translateX(10%);
